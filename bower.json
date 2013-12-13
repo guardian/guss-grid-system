@@ -7,7 +7,6 @@
     "test.html"
   ],
   "dependencies": {
-    "guss-rem": "~1.0.0",
-    "guss-css3": "~1.0.0"
+    "guss-rem": "~1.0.0"
   }
 }
