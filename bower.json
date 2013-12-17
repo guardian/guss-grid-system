@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "_grid-system.scss",
   "ignore": [
-    "CHANGELOG.md",
-    "test.html"
+    "CHANGELOG.md"
   ],
   "dependencies": {
     "guss-rem": "~1.0.0"
