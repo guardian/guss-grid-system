@@ -26,6 +26,8 @@ Provides Sass mixins and values for the Guardian grid system.
 .element {
     width: gs-span(3);
     height: gs-height(4);
+    padding-top: $gs-baseline; // Use baselines for vertical spacing
+    margin-left: $gs-gutter;   // Use gutters for horizontal spacing
 }
 .custom-wrapper {
     @include gs-container;
