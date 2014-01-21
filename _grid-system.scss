@@ -2,7 +2,7 @@
 // Guss grid system
 // =============================================================================
 
-// gs- prefixes stand for Grid System
+// gs- prefix stand for Grid System
 
 // Default configuration
 $gs-gutter:       20px !default;
@@ -26,11 +26,15 @@ $gs-max-columns:  16 !default;
 @mixin gs-container {
     position: relative;
     margin: 0 auto;
-    max-width: gs-span(14) + $gs-gutter*2;
+    @include rem((
+        max-width: gs-span(14) + $gs-gutter*2
+    ));
 
     // Snap up to 16 columns on wider viewports
     @include mq(wide) {
-        max-width: gs-span(16) + $gs-gutter*2;
+        @include rem((
+            max-width: gs-span(16) + $gs-gutter*2
+        ));
     }
 }
 
@@ -39,7 +43,9 @@ $gs-max-columns:  16 !default;
     // example: `<div class="gs-span-3"></div>`
     @for $n from 1 through $gs-max-columns {
         .gs-span-#{$n} {
-            width: gs-span($n);
+            @include rem((
+                width: gs-span($n)
+            ));
         }
     }
 }
