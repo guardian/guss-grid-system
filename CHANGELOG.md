@@ -1,3 +1,7 @@
+## 1.0.2 (2014-04-17)
+
+- Loosen dependency versioning
+
 ## 1.0.1 (2014-01-21)
 
 - [new] Support for text scaling: user defined text size has an impact on the grid dimensions
