@@ -1,3 +1,8 @@
+## 1.0.3 (2014-07-17)
+
+- [new] [Playground on Sassmeister](http://sassmeister.com/gist/29316bef331ab0b1d551)
+- [new] Unit reference
+
 ## 1.0.2 (2014-04-17)
 
 - Loosen dependency versioning
