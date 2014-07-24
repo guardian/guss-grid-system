@@ -79,6 +79,7 @@ $gs-max-columns:  16 !default;
  * @requires {mixin} mq
  * @requires {function} gs-span
  * @requires {variable} gs-gutter
+ * @requires {variable} gs-max-columns
  */
 @mixin gs-container {
     position: relative;
