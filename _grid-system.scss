@@ -33,7 +33,7 @@ $gs-column-width: 60px !default;
 $gs-row-height:   36px !default;
 
 /**
- * Number of columns
+ * Number of columns.
  * 
  * @type Number
  */
@@ -44,7 +44,13 @@ $gs-max-columns:  16 !default;
 // =============================================================================
 
 /**
- * Grid span
+ * Grid span.
+ * Compute the width of a given number of grid columns.
+ *
+ * @example
+ * .element {
+ *   width: gs-span(3);
+ * }
  *
  * @param {Number} $n-columns
  *
@@ -59,6 +65,12 @@ $gs-max-columns:  16 !default;
 
 /**
  * Grid height.
+ * Compute the height of a given number of vertical grid units.
+ *
+ * @example
+ * .element {
+ *   padding-top: gs-height(2);
+ * }
  *
  * @param {Number} $n-rows
  *
@@ -73,7 +85,7 @@ $gs-max-columns:  16 !default;
 
 /**
  * Grid container.
- * Snap up to `$gs-max-columns` columns on wider viewports.
+ * Snaps to `$gs-max-columns` columns at the wide breakpoint.
  *
  * @requires {mixin} rem
  * @requires {mixin} mq
@@ -84,7 +96,6 @@ $gs-max-columns:  16 !default;
 @mixin gs-container {
     position: relative;
     margin: 0 auto;
-
     @include rem((
         max-width: gs-span(14) + $gs-gutter * 2
     ));
@@ -97,8 +108,7 @@ $gs-max-columns:  16 !default;
 }
 
 /**
- * Grid helpers.
- * Classes usable if an object has the same width across all viewports.
+ * Grid columns helper classes, useful for quick prototyping.
  *
  * @example markup
  * <div class="gs-span-3"></div>
@@ -122,7 +132,7 @@ $gs-max-columns:  16 !default;
 // =============================================================================
 
 /**
- * Grid system
+ * Grid system.
  *
  * @requires {mixin} gs-container
  */
