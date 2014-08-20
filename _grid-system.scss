@@ -87,7 +87,6 @@ $gs-max-columns: 16 !default;
  * Grid container.
  * Snaps to `$gs-max-columns` columns at the wide breakpoint.
  *
- * @requires {mixin} rem
  * @requires {mixin} mq
  * @requires {function} gs-span
  * @requires {variable} gs-gutter
@@ -96,14 +95,10 @@ $gs-max-columns: 16 !default;
 @mixin gs-container {
     position: relative;
     margin: 0 auto;
-    @include rem((
-        max-width: gs-span(14) + $gs-gutter * 2
-    ));
+    max-width: gs-span(14) + $gs-gutter * 2;
 
     @include mq(wide) {
-        @include rem((
-            max-width: gs-span($gs-max-columns) + $gs-gutter * 2
-        ));
+        max-width: gs-span($gs-max-columns) + $gs-gutter * 2;
     }
 }
 
@@ -115,14 +110,11 @@ $gs-max-columns: 16 !default;
  *
  * @requires {variable} gs-max-columns
  * @requires {function} gs-span
- * @requires {mixin} rem
  */
 @mixin gs-helpers {
     @for $n from 1 through $gs-max-columns {
         .gs-span-#{$n} {
-            @include rem((
-                width: gs-span($n)
-            ));
+            width: gs-span($n);
         }
     }
 }
