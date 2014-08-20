@@ -1,10 +1,6 @@
 {
   "name": "guss-grid-system",
-  "version": "1.0.3",
-  "main": "_grid-system.scss",
-  "ignore": [
-    "CHANGELOG.md"
-  ],
+  "main": "_grid-system.scss"
   "dependencies": {
     "guss-rem": "~1"
   }
