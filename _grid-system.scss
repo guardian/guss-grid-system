@@ -6,36 +6,46 @@
 
 /**
  * Gutter width.
- * 
+ *
  * @type Number
+ *
+ * @group grid-system
  */
 $gs-gutter: 20px !default;
 
 /**
  * Baseline size.
- * 
+ *
  * @type Number
+ *
+ * @group grid-system
  */
 $gs-baseline: 12px !default;
 
 /**
  * Column width.
- * 
+ *
  * @type Number
+ *
+ * @group grid-system
  */
 $gs-column-width: 60px !default;
 
 /**
  * Row height.
- * 
+ *
  * @type Number
+ *
+ * @group grid-system
  */
 $gs-row-height: 36px !default;
 
 /**
  * Number of columns.
- * 
+ *
  * @type Number
+ *
+ * @group grid-system
  */
 $gs-max-columns: 16 !default;
 
@@ -58,6 +68,8 @@ $gs-max-columns: 16 !default;
  * @requires {variable} gs-gutter
  *
  * @return {Number}
+ *
+ * @group grid-system
  */
 @function gs-span($n-columns) {
     @return $n-columns * $gs-column-width + $gs-gutter * ($n-columns - 1);
@@ -78,6 +90,8 @@ $gs-max-columns: 16 !default;
  * @requires {variable} gs-baseline
  *
  * @return {Number}
+ *
+ * @group grid-system
  */
 @function gs-height($n-rows) {
     @return $n-rows * $gs-row-height + $gs-baseline * ($n-rows - 1);
@@ -91,6 +105,8 @@ $gs-max-columns: 16 !default;
  * @requires {function} gs-span
  * @requires {variable} gs-gutter
  * @requires {variable} gs-max-columns
+ *
+ * @group grid-system
  */
 @mixin gs-container {
     position: relative;
@@ -110,6 +126,8 @@ $gs-max-columns: 16 !default;
  *
  * @requires {variable} gs-max-columns
  * @requires {function} gs-span
+ *
+ * @group grid-system
  */
 @mixin gs-helpers {
     @for $n from 1 through $gs-max-columns {
@@ -127,6 +145,8 @@ $gs-max-columns: 16 !default;
  * Grid system.
  *
  * @requires {mixin} gs-container
+ *
+ * @group grid-system
  */
 @mixin grid-system {
     .gs-container {
